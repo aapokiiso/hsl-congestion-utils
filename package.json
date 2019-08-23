@@ -3,6 +3,10 @@
     "version": "1.0.0",
     "description": "Utility functions for HSL congestion tracking",
     "main": "index.js",
+    "scripts": {
+        "lint": "eslint .",
+        "lint:fix": "eslint --fix ."
+    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/aapokiiso/hsl-congestion-utils.git"
@@ -18,5 +22,10 @@
     },
     "peerDependencies": {
         "moment": "^2.24.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.5.5",
+        "@lamiaoy/eslint-config": "^2.0.1",
+        "eslint": "^6.2.1"
     }
 }
