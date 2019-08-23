@@ -1,0 +1,22 @@
+{
+    "name": "@aapokiiso/hsl-congestion-utils",
+    "version": "1.0.0",
+    "description": "Utility functions for HSL congestion tracking",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/aapokiiso/hsl-congestion-utils.git"
+    },
+    "author": "Aapo Kiiso <aapo@kii.so>",
+    "license": "CC0-1.0",
+    "bugs": {
+        "url": "https://github.com/aapokiiso/hsl-congestion-utils/issues"
+    },
+    "homepage": "https://github.com/aapokiiso/hsl-congestion-utils#readme",
+    "dependencies": {
+        "moment-timezone": "^0.5.26"
+    },
+    "peerDependencies": {
+        "moment": "^2.24.0"
+    }
+}
