@@ -1,7 +1,6 @@
 'use strict';
 
 const gtfsIdLib = require('./gtfs-id');
-const CouldNotParseError = require('./error/could-not-parse');
 
 module.exports = {
     /**
@@ -24,11 +23,11 @@ module.exports = {
      *
      * @param {string} realtimeNextStopId - Next stop ID in the Realtime API
      * @returns {string}
-     * @throws CouldNotParseError - If trip is in end of line
+     * @throws If trip is in end of line
      */
     convertRealtimeApiForRoutingApi(realtimeNextStopId) {
         if (this.isEndOfLine(realtimeNextStopId)) {
-            throw new CouldNotParseError(
+            throw new Error(
                 'Could not parse next stop GTFS ID, the trip is in end of line.'
             );
         }

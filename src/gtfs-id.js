@@ -1,7 +1,5 @@
 'use strict';
 
-const CouldNotParseError = require('./error/could-not-parse');
-
 module.exports = {
     /**
      * GTFS IDs are used to identify stops, routes and
@@ -13,11 +11,11 @@ module.exports = {
      *
      * @param {string} realtimeId - Realtime API ID, eg. "1010419"
      * @returns {string} Routing API ID, eg. "HSL:1010419"
-     * @throws CouldNotParseError - If no Realtime API GTFS ID given.
+     * @throws If no Realtime API GTFS ID given.
      */
     convertRealtimeApiForRoutingApi(realtimeId) {
         if (!realtimeId) {
-            throw new CouldNotParseError(
+            throw new Error(
                 'Could not parse empty Realtime API ID to Routing API GTFS ID.'
             );
         }
